@@ -27,3 +27,13 @@ markdown: kramdown
 theme: jekyll-theme-modernist 
 plugins:
   - jekyll-feed
+  - jekyll-scholar
+
+# scholar
+scholar:
+  style: apa
+  bibliography_template: <abbr>[{{key}}]</abbr> {{reference}}
+  locale: en
+  sort_by: none
+  order: ascending
+  query: "@*"
