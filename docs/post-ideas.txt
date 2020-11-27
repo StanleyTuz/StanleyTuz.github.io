@@ -1,0 +1,12 @@
+Thoughts on continuity, differentiability.
+
+Inverse Function Theorem proof (SPIVAK)
+
+Compactness, Heine-Borel (SPIVAK)
+
+Differentiability and partial derivatives (SPIVAK)
+
+Equivalent definitions of derivative: limit, linear approx, etc. (?)
+
+
+Get theorem, lemma, proof enviroments working in HTML/CSS
