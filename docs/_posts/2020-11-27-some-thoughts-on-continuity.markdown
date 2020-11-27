@@ -10,7 +10,7 @@ tags: calculus analysis continuity differentiability
 <h2>Thoughts on continuity, differentiability.</h2>
 Continuity gives local info. So does derivative. How do they differ? 
 
-{% cite Sp65 Ru64 --file refs %}
+{% comment %}{% cite Sp65 Ru64 --file refs %}{% endcomment %}
 
 
 - Trying to understand the inverse function theorem. It says that being differentiable with non-zero derivative means that we can locally take an inverse, and also that the inverse will be differentiable. The proof is quite involved,so I wanted to step back and think about rudiments first.
@@ -39,6 +39,6 @@ This is not a theorem
 - Use the notion of continuous differentiability to save the day. From the above lemma, if we now take $f$ to be continuously differentiable, then $f'(a)>0$ means $f'(x)>0$ for some neighborhood of $a$. Now given any $x<y$ in this neighborhood, we have by the mean value theorem $f\left(y\right)-f\left(x\right = f'\left(z\right) \left(y-x\right) > 0 $ so that $f$ is increasing on this interval.
 
 
-
+{% comment %}
 <h3>References</h3>
-{% bibliography --file refs --cited %}
+{% bibliography --file refs --cited %}{% endcomment %}
