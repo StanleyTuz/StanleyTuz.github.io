@@ -13,6 +13,16 @@ Continuity gives local info. So does derivative. How do they differ?
 {% comment %}{% cite Sp65 Ru64 --file refs %}{% endcomment %}
 
 
+<div class="theorem" text="Stan's Theorem">This is my fancy theorem.</div>
+<div class="proof">This is the proof of my fancy theorem.</div>
+
+
+
+
+
+
+
+
 - Trying to understand the inverse function theorem. It says that being differentiable with non-zero derivative means that we can locally take an inverse, and also that the inverse will be differentiable. The proof is quite involved,so I wanted to step back and think about rudiments first.
 
 - The epsilon-delta definition of limit says that we can make our function arbitrarily close to the limiting value by restricting the domain to be sufficiently small. In the case of continuous functions, the limit of the function *is* the value of the function. Basically, continuous functions behave as we would expect as we move toward a point of continuity.
@@ -28,7 +38,7 @@ Continuity gives local info. So does derivative. How do they differ?
 
 This is not a theorem 
 
-<div class="theorem"> This is a theorem</div>
+
 
 - What does it mean if $$f$$ is differentiable at $$a$$, and $f'\left(a\right)>0$? From the definition, it means that as we approach $a$, the slope of the tangent line to the graph of the function approaches the quantity $f'\left(a\right)$, which is positive. My intuition tells me that this means that the function is "instantaneously increasing" at $a$, but when I go to prove it, I run into some difficulty: is it enough to say that $f'\left(a\right)>0$ means that $f$ increasing on some local neighborhood of $$a$$ (spoiler: it is not).
 

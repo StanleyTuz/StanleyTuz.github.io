@@ -8,7 +8,63 @@
     font-style: italic;
 }
 .theorem:before {
-    content: "Theorem.";
+    content: "Theorem. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.theorem[text]:before {
+    content: "Theorem (" attr(text) "). ";
+}
+
+.lemma {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.lemma:before {
+    content: "Lemma. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.lemma[text]:before {
+    content: "Lemma (" attr(text) "). ";
+}
+
+.corollary {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+}
+.corollary:before {
+    content: "Corollary. ";
+    font-weight: bold;
+    font-style: normal;
+}
+.corollary[text]:before {
+    content: "Corollary (" attr(text) "). ";
+}
+
+.proof {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+}
+.proof:before {
+    content: "Proof. ";
+    font-style: italic;
+}
+.proof:after {
+    content: "\25FC";
+    float:right;
+}
+
+.definition {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+}
+.definition:before {
+    content: "Definition. ";
     font-weight: bold;
     font-style: normal;
 }
