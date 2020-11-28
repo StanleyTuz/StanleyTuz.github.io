@@ -6,6 +6,8 @@
     display: block;
     margin: 12px 0;
     font-style: italic;
+    background-color: #bbbbbb;
+    padding: 10px;
 }
 .theorem:before {
     content: "Theorem. ";
@@ -20,6 +22,8 @@
     display: block;
     margin: 12px 0;
     font-style: italic;
+    background-color: #bbbbbb;
+    padding: 10px;
 }
 .lemma:before {
     content: "Lemma. ";
@@ -34,6 +38,8 @@
     display: block;
     margin: 12px 0;
     font-style: italic;
+    background-color: #bbbbbb;
+    padding: 10px;
 }
 .corollary:before {
     content: "Corollary. ";
@@ -48,6 +54,8 @@
     display: block;
     margin: 12px 0;
     font-style: normal;
+    background-color: #cccccc;
+    padding: 10px;
 }
 .proof:before {
     content: "Proof. ";
@@ -62,9 +70,15 @@
     display: block;
     margin: 12px 0;
     font-style: normal;
+    background-color: #bbbbbb;
+    padding: 10px;
 }
 .definition:before {
     content: "Definition. ";
     font-weight: bold;
     font-style: normal;
+}
+
+.post-content {
+    margin-top: 30px;
 }
