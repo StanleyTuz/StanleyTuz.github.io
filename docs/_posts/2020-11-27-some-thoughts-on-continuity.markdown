@@ -44,16 +44,16 @@ Notice that this holds for any continuous function. For example, if we have a co
 
 
 ### Derivative
+The derivative of a function is a similar creature in that both the derivative and the definition of continuity involve limits, but the quantity of which we are taking the limit has an important difference. Continuity describes what the function itself approaches as we near a point, while the derivative describes what the "difference quotient" approaches as we approach the point. AKA the slope of the tangent line to the graph of the function.
 
-- The derivative of a function is a similar creature in that both the derivative and the definition of continuity involve limits, but the quantity of which we are taking the limit has an important difference. Continuity describes what the function itself approaches as we near a point, while the derivative describes what the "difference quotient" approaches as we approach the point. AKA the slope of the tangent line to the graph of the function.
-- In all situations, differentiability at a point implies continuity at that point; the converse does not hold, and the canonical counterexample is the function 
+In all situations, differentiability at a point implies continuity at that point; the converse does not hold, and the canonical counterexample is the function 
 \begin{equation} f\left(x\right) = \left|x\right|. \end{equation}
 
-- Think about mean-value theorem?
+Think about mean-value theorem?
 
 
 
-- What does it mean if $$f$$ is differentiable at $$a$$, and $$f'\left(a\right)>0$$? From the definition, it means that as we approach $a$, the slope of the tangent line to the graph of the function approaches the quantity $$f'\left(a\right)$$, which is positive. My intuition tells me that this means that the function is "instantaneously increasing" at $a$, but when I go to prove it, I run into some difficulty: is it enough to say that $$f'\left(a\right)>0$$ means that $$f$$ increasing on some local neighborhood of $$a$$ (spoiler: it is not).
+What does it mean if $f$ is differentiable at $a$, and $f'\left(a\right)>0$? From the definition, it means that as we approach $a$, the slope of the tangent line to the graph of the function approaches the quantity $$f'\left(a\right)$$, which is positive. My intuition tells me that this means that the function is "instantaneously increasing" at $a$, but when I go to prove it, I run into some difficulty: is it enough to say that $$f'\left(a\right)>0$$ means that $$f$$ increasing on some local neighborhood of $$a$$ (spoiler: it is not).
 
 -[Do my "proof" and show that the most we can conclude in this case is that $$f\left(x\right)>0$$ for $$x>a$$, etc. This does not mean that it is increasing!]
 

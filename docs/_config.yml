@@ -16,7 +16,7 @@
 title: pullback*
 email: stanley.tuznik@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Doing some math.
+  A place where I can take some notes about theorems and proofs.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://StanleyTuz.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: stanleytuz
