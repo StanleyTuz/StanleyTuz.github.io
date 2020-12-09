@@ -31,7 +31,18 @@ As we might recall from our early studies of the more computational aspects vect
     \right]^T \end{equation} where $f^i:\mathbb{R}^n\rightarrow \mathbb{R}$. Thus, a function of this sort merely collates the component functions into a vector.
 
 <div class="lemma">
-A function $f:\mathbb{R}^n \rightarrow \mathbb{R}^m$ is differentiable at $a\in \mathbb{R}^n$ if and only if each component function $f^i$ is differentiable at $a$.
+A function $f:\mathbb{R}^n \rightarrow \mathbb{R}^m$ is differentiable at $a\in \mathbb{R}^n$ if and only if each component function $f^i:\mathbb{R}^n\rightarrow \mathbb{R}$ is differentiable at $a$.
+</div>
+<div class="proof">
+<p>Certainly, if $f$ is differentiable, then the component functions $f^{i} = \pi_i \circ f$ are also differentiable, thanks to the chain rule, and since the projections $\pi_i:\mathbb{R}^n\rightarrow \mathbb{R}$ are differentiable.
+</p>
+<p>
+Conversely, assume each $f^i$ is differentiable at $a$. Then 
+\begin{align}
+\left|f\left(a+h\right) + f\left(a\right) - Df\left(a\right)\cdot h \right| & \leq \sum_{i=1}^n  \left|f^i\left(a+h\right) + f^i\left(a\right) - Df^i\left(a\right)\cdot h \right| 
+\end{align}
+where $Df^i\left(a\right)$ is the $i$-th row of the Jacobian matrix $Df\left(a\right)$. Dividing by $\left|h\right|$ and taking the limit $h\rightarrow 0$ proves the result.
+</p>
 </div>
 
 This observation will allow us to simplify by restricting our attention to functions $f:\mathbb{R}^n\rightarrow \mathbb{R}$. These are functions which take in $n$ coordinates and return a single scalar (this is often done within proofs). The partial derivatives, which we now define, describe the sensitivity of this scalar output to changes in one of the input coordinates.
@@ -40,7 +51,7 @@ This observation will allow us to simplify by restricting our attention to funct
 The $i$-th partial derivative of $f:\mathbb{R}^n\rightarrow \mathbb{R}$ at $a\in \mathbb{R}^n$ is the quantity $$ D_i f\left(a\right) = \lim_{h\rightarrow 0} \frac{f\left(a^1,a^2,\ldots,a^i+h,\ldots,a^n\right)-f\left(a^1,a^2,\ldots,a^i,\ldots,a^n\right)}{h} $$
 </div>
 
-Notice that this is the usual definition of the derivative of the scalar-valued, univariate function $g\left(x\right) = f\left(a^1,a^2,\ldots,x,\ldots,a^n\right)$.
+Notice that this is the usual definition of the derivative of the scalar-valued, univariate function $g\left(x\right) = f\left(a^1,a^2,\ldots,x,\ldots,a^n\right)$. In the next section, we will see that, perhaps as expected, the derivative and the partial derivatives are intertwined.
 
 
 
