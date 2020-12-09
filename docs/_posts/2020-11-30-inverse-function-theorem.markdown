@@ -10,7 +10,7 @@ tags: calculus analysis inverse theorem
 In this post, I am taking notes on the theory of multivariate, vector-valued differentiation as developed by Spivak in *Calculus on Manifolds* (1965). In particular, I walk slowly through Spivak's proof of the inverse function theorem.
 
 ### Give Intuition from One Dimension
-Recall from our discussion on continuity that if $f'\left(a\right)>0$ and $f'$ is continous on some neighborhood of $a$ (that is, $f$ is continuously differentiable there) then we have $f'\left(x\right)>0$ for all $x$ in a neighborhood $V$ of $a$. This means that $f$ is strictly increasing on $V$, and so it is injective there. That, in turn, means that its inverse, $f^{-1}$, exists and is well-defined on $f\left(V\right)$.
+Recall from our discussion on continuity that if $f'\left(a\right)>0$ and $f'$ is continous on some neighborhood of $a$ (that is, $f$ is continuously differentiable there) then we have $f'\left(x\right)>0$ for all $x$ in a neighborhood $V$ of $a$. This means that $f$ is strictly increasing on $V$, and so it is injective there. That, in turn, means that its inverse, $f^{-1}$, exists and is well-defined on $f\left(V\right)$. (Note: we can either take (*a*) $f'\left(a\right)>0$ and $f \in C^1$, or (*b*) we can take $f'\left(x\right)>0$ on some neighborhood of $a$ directly; then apply the mean-value theorem here to obtain the fact that $f$ is strictly increasing.)
 
 If we picture this situation graphically, on $V$, $f$ has positive slope. We can try to look at $f^{-1}$ by flipping the graph $\left(x,f\left(x\right)\right)$ over the line $y=x$, or by looking at the $y$-axis. Recall that $f'\left(a\right)>0$ means that the slope of the tangent line to the graph of $f$, at $a$, is positive; in other words, we linearly approximate $f$ at $a$ by a line with positive slope. If we consider the graph of the inverse function, the same linear approximation holds at $f\left(a\right)$, but the slope is inverted. The statement of the inverse function theorem for univariate functions makes this precise:
 
@@ -31,6 +31,7 @@ By properties of limits, then, the right-hand side tends to $1/f'\left(x\right)$
 \left(f^{-1}\right)'\left(y\right) = \lim_{y'\rightarrow y} \frac{f^{-1}\left(y'\right) - f^{-1}\left(y\right)}{y'-y} = \frac{1}{f'\left(f^{-1}\left(y\right)\right)}
 \end{equation}
 </div>
+(see Rudin's *PMA*, Chapter 5 Exercise 2 which asks for this proof.)
 
 This makes a lot of sense. If the function has nonzero derivative at $a$, then near $a$ it is non-constant and strictly increasing (resp. decreasing), so we can invert it. The result is that the inverse itself is differentiable, and that the derivative is related nicely to the derivative of $f$ at $a$. The statement involves not only the points $a$ and $f\left(a\right)$, but all points $x$ and $f\left(x\right)$ on neighborhoods of $a$ and $f\left(a\right)$. These neighborhoods are provided by our assumption of continuous differentiability of $f$.
 
