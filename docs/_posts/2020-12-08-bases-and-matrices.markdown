@@ -11,6 +11,7 @@ In the spirit of trying to get more into advanced pure mathematics, I've taken a
 
 <p>
 To summarize, [a poster on Math StackExchange](https://math.stackexchange.com/a/1477478/592890) said it well:
+
 >Think in terms of linear transformations, compute with matrices.
 
 Several theorems in the book support this philosophy, specifically those which develop the isomorphism between the vector space of linear mappings between two vector spaces and the vector space of matrices.
