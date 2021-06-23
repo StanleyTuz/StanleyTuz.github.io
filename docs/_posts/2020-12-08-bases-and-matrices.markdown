@@ -6,9 +6,9 @@ categories: jekyll update
 usemathjax: true
 tags: vector space basis matrix
 ---
-
-In the spirit of trying to get more into advanced pure mathematics, I've taken a step back and started trying to re-learn linear algebra. One place I always used to trip at was the connection between vector spaces and matrices. In this post, I'm going to leave some notes pertaining to this connection which I've collected by studying the first few chapters of Axler's *Linear Algebra Done Right*.
-
+<p>
+In the spirit of trying to get more into advanced pure mathematics, I've taken a step back and started trying to re-learn linear algebra. One place I always used to trip at was the connection between vector spaces and matrices. In this post, I'm going to leave some notes pertaining to this connection which I've collected by studying the first few chapters of Axler's *Linear Algebra Done Right*. 
+</p>
 <p>
 To summarize, [a poster on Math StackExchange](https://math.stackexchange.com/a/1477478/592890) said it well:
 
@@ -17,6 +17,9 @@ To summarize, [a poster on Math StackExchange](https://math.stackexchange.com/a/
 Several theorems in the book support this philosophy, specifically those which develop the isomorphism between the vector space of linear mappings between two vector spaces and the vector space of matrices.
 </p>
 
+<p>
+    Note: apologies in advance for some messy notation. It should be obvious what I mean from context, but the notation for column matrices as vectors expressed in a particular bass is a bit sloppy.
+</p>
 
 ### Matrix Representations of Vectors
 Assume we have a vector space $V$ with basis $\beta_V = \left( v_1, v_2,\ldots,v_m\right)$, so that $\dim V = m$. The significance of a basis is that every vector $v \in V$ may be written uniquely as a linear combination of the basis vectors. When the basis set and its ordering are understood, we can write a vector in an arbitrary linear space as a column matrix whose elements are the scalar coefficients in the combination. In particular, the vector $$ v = \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_m v_m $$ can be written as the vector $$ \left[ v\right]_{\beta} = \left(\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_m \end{array} \right) $$ where I'll use the notation $\left[\cdot \right]_{\beta}$ to indicate the matrix representation of the enclosed quantity with respect to the basis $\beta$.
@@ -60,7 +63,7 @@ This matrix representation of an arbitrary vector becomes useful due to the defi
     Recalling that each column of the matrix of $T$ with respect to bases $A$ and $B$, written here as $\left[ T \right]_{AB}$, is the image of a basis vector in $A$ under $T$, written in the basis $B$. Formally, the $j$-th column is $\left[Tv_j\right]_B$ (we know that this choice of structure of the matrix representation of $T$ leads to the isomorphism between matrices and finite-dimensional vector space linear mappings). Since the first $q$ vectors in the basis $A$ for $V$ are the basis for $\text{range}\left(A\right)$, by definition of $B$ we have $\left[Tv_j\right]_B = \left(0,0,\ldots,1, \ldots, 0\right)$ where the only non-zero entry is in the $j$-th place. Hence, the first $\dim \text{range}\left(T\right) = q$ columns of $\left[T\right]_{AB}$ have ones along the main "diagonal"; it's not a true diagonal unless $\dim V = \dim W$ and the matrix is square.
 </p>
 <p>
-    The remaining $\dim \text{null}\left(T\right) = p$ vectors in $A$ are a basis for $text{null}\left(T\right)$, so we have $\left[Tu_i\right]_{B} = \left[0\right]_{B}= (0,\ldots,0\right)$ for the rest of the columns.
+    The remaining $\dim \text{null}\left(T\right) = p$ vectors in $A$ are a basis for $\text{null}\left(T\right)$, so we have $\left[Tu_i\right]_{B} = \left[0\right]_{B}= \left(0,\ldots,0\right)$ for the rest of the columns.
 </p>
 
 
@@ -72,7 +75,7 @@ This matrix representation of an arbitrary vector becomes useful due to the defi
     First, consider the standard Euclidean bases on both $V$ and $W$. The images of these vectors are trivial to compute and to write in the standard Euclidean bases, so the matrix representation is $$ \left[ \begin{array}{ccc} 1 & 1 & 0 \\ 1 & 1 & 0 \end{array} \right].$$
 </p>
 <p>
-    More interestingly, let's follow the process above to get the simplified representation. The null space of $T$ is the set of all $\left(x,y\right)$ such that $x+y = 0$, i.e., $x=-y$, so the null space has basis $$\left( \left(1,-1,0\right), \left(0,0,1\right)\right)$$. The process for extending this to a basis of all of $V$ is to simply choose a vector which is not in the span of the previous vectors; by inspection, we come up with $$A=\left(\left( \begin{array}{c} 0 \\ 1 \\ 0 \end{array} \right), \left( \begin{array}{c}1\\ -1 \\ 0 \end{array} \right), \left( \begin{array}{c} 0 \\ 0 \\ 1 \end{array} \right)\right)) = \left(v_1, u_1, u_2\right)$$ as the desired basis for $V$, where we know $\left(Tv_1\right)$ is a basis for $\text{range}\left(T\right)$ and $\left(u_1,u_2\right)$ was constructed as a basis for $\text{null}\left(T\right)$. 
+    More interestingly, let's follow the process above to get the simplified representation. The null space of $T$ is the set of all $\left(x,y\right)$ such that $x+y = 0$, i.e., $x=-y$, so the null space has basis $$\left( \left(1,-1,0\right), \left(0,0,1\right)\right)$$. The process for extending this to a basis of all of $V$ is to simply choose a vector which is not in the span of the previous vectors; by inspection, we come up with $$A=\left(\left( \begin{array}{c} 0 \\ 1 \\ 0 \end{array} \right), \left( \begin{array}{c}1\\ -1 \\ 0 \end{array} \right), \left( \begin{array}{c} 0 \\ 0 \\ 1 \end{array} \right)\right) = \left(v_1, u_1, u_2\right)$$ as the desired basis for $V$, where we know $\left(Tv_1\right)$ is a basis for $\text{range}\left(T\right)$ and $\left(u_1,u_2\right)$ was constructed as a basis for $\text{null}\left(T\right)$. 
 </p>
 <p>
     The next step is to obtain the basis of $W$, $B$, corresponding to our choice of basis $A$ of $V$ which, together, admit the nice representation of $T$. As in our above discussion, we just push the $v_j$ through $T$, then extend the collection of these images to be a basis of $W$. Let $$ w_1 = \left(1, 0\right) = \left[Tv_1\right]_B = \left[\left(1,1\right)\right]_B $$. The remaining vectors in the basis $A$ are the null basis, so the corresponding columns are zeros. Thus, the matrix representation we have obtained is $$ \left[T\right]_{AB} = \left[ \begin{array}{ccc} 1 & 0 & 0 \\ 0 & 0 & 0 \end{array}\right] $$ which is precisely the representation we sought. 
@@ -85,7 +88,7 @@ This matrix representation of an arbitrary vector becomes useful due to the defi
 
 ### Conclusion
 
-We will see similar ways of choosing bases to simplify matrix representations when we talk about eigenvalues of linear operators of finite-dimensional spaces.
+To reiterate, any linear map between finite-dimensional vector spaces may be represented as matrix multiplication in the appropriate matrix vector spaces. By cleverly designing bases for these spaces which account for the structure of the map --- in our example, the null space and the range --- we can come up with very simple representations. We will see similar ways of choosing bases to simplify matrix representations when we talk about eigenvalues of linear operators of finite-dimensional spaces.
 
 
 {% comment %}
