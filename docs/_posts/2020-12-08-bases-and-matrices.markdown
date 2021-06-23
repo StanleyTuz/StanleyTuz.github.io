@@ -19,44 +19,46 @@ Several theorems in the book support this philosophy, specifically those which d
 
 
 ### Matrix Representations of Vectors
-Assume we have a vector space $V$ with basis $\beta_V = \left\{v_1, v_2,\ldots,v_m\right\}$, so that $\dim V = m$. The significance of a basis is that every vector $v \in V$ may be written uniquely as a linear combination of the basis vectors. When the basis set and its ordering are understood, we can write a vector in an arbitrary linear space as a column matrix whose elements are the scalar coefficients in the combination. In particular, the vector $$ v = \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_m v_m $$ can be written as the vector $$ \left[ v\right]_{\beta} = \left(\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \ldots \\ \alpha_m \end{array} \right) $$ where I'll use the notation $\left[\cdot \right]_{\beta}$ to indicate the matrix representation of the enclosed quantity with respect to the basis $\beta$.
+Assume we have a vector space $V$ with basis $\beta_V = \left( v_1, v_2,\ldots,v_m\right)$, so that $\dim V = m$. The significance of a basis is that every vector $v \in V$ may be written uniquely as a linear combination of the basis vectors. When the basis set and its ordering are understood, we can write a vector in an arbitrary linear space as a column matrix whose elements are the scalar coefficients in the combination. In particular, the vector $$ v = \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_m v_m $$ can be written as the vector $$ \left[ v\right]_{\beta} = \left(\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_m \end{array} \right) $$ where I'll use the notation $\left[\cdot \right]_{\beta}$ to indicate the matrix representation of the enclosed quantity with respect to the basis $\beta$.
 
+This matrix representation of an arbitrary vector becomes useful due to the definition of matrix multiplication, and from this, the important fact that any linear map between two finite-dimensional vector spaces can be represented as a matrix-vector product. 
 
-
-### Matrix Representations of Linear Maps
-
-<div class="definition" >
-    For a function $f:I\subset\mathbb{R}^1\rightarrow \mathbb{R}^1$ defined on an interval $I$ containing a point $x$, $f$ has derivative $$ f'\left(x\right) = \lim_{t\rightarrow x} = \frac{f\left(t\right)-f\left(x\right)}{t-x} $$ if the limit exists in $\mathbb{R}^1$.
+<div class="theorem" text="Span of Range">
+    Let $T:V\rightarrow W$ be a linear map between finite-dimensional vector spaces $V$ and $W$, and let $\beta = \left(v_1,v_2,\ldots,v_m\right)$ be a basis for $V$. Then $\left(Tv_1, Tv_2, \ldots, Tv_m\right)$ spans $\text{range}\left(T\right)$; if linearly independent, it is a basis for $\text{range}\left(T\right)$.
 </div>
+
 <p>
-    This is the standard $\epsilon-\delta$ definition of the derivative. By changing the variables $t = x+h$, where $h$ now represents a small distance from $x$, we have the equivalent expression $$ f'\left(x\right) = \lim_{h\rightarrow 0} = \frac{f\left(x+h\right)-f\left(h\right)}{h}. $$ The equivalence of these two is readily proved by appealing to the definition of limit.
+    The proof is nearly evident based on the linearity of $T$ and the definition of basis: let $w\in \text{range}\left(T\right) \subseteq W$. Then $w = Tv $ for some $v\in V$, which has the basis expansion $v = \alpha_1 v_1 + \cdots + \alpha_m v_m$. Thus $$ w = t\left(\alpha_1 v_1 + \cdots + \alpha_m v_m\right) = \alpha_1 Tv_1 + \cdots + \alpha_m Tv_m, $$ thus these vectors span $\text{range}\left(T\right)$. If the set is linearly independent, it is a linearly independent spanning set, and so is a basis for $\text{range}\left(T\right)$.
 </p>
 <p>
-    A second formulation of the derivative can be identified by making a small modification to the above: since $f'\left(a\right)$ is just a number, independent of the limit variable $h$, we can move it inside the limit with impunity, obtaining $$ \lim_{h\rightarrow 0} \frac{f\left(x+h\right) - f\left(x\right) - f'\left(a\right)\cdot h}{h} = 0 $$ Then the derivative can be defined as this number $f'\left(a\right)$ which makes this equation true, i.e., the difference quotient limiting to zero (we can show from the definition that derivatives are unique). It turns out that this expression most nicely generalizes to higher-dimensional Euclidean spaces.
+    Note that we are *not* saying that $\left(Tv_1, \ldots, Tv_m\right)$ spans all of $W$; it makes sense that it only hits the range of $T$, i.e., the things in $W$ which are "reachable" via $T$.
 </p>
 <p>
-    If we define the numerator of this latest expression to be $$ r\left(h\right) = f\left(x+h\right)-f\left(x\right)-f'\left(x\right)\cdot h,$$ then we can define the derivative as the (unique) number so that $$ f\left(x+h\right) = f\left(x\right) + f'\left(x\right)\cdot h + r\left(h\right), \; \text{where} \; \lim_{h\rightarrow 0} \frac{r\left(h\right)}{h} = 0. $$ Note that this is an exact equation; where $h$ is used in the $\epsilon-\delta$ difference quotient as the dummy limit variable, here it is an actual parameter which controls the point near $x$, $x'=x+h$, at which we want to find the function value. In fact, this definition of the derivative lends itself very nicely to the idea of the derivative as "the best linear approximation to $f$ at $x$." Rearranging the above, we have $$ f\left(x+h\right) - \left( f\left(x\right) + f'\left(a\right)\cdot h \right) = r\left(h\right)$$ so that the linear (in $h$) function $f\left(x\right) + f'\left(a\right)\cdot h$ approximates $f$ at $x+h$ with error $r\left(h\right)$. From the definition, this error in the approximation clearly tends to zero as $h$ does, emphasizing the fact that this approximation is only a local one; this makes sense, since the derivative is "local information."
+    What if the set $\left(Tv_1, \ldots, Tv_m\right)$ is not linearly independent? It spans $\text{range}\left(T\right)$, so it can certainly be reduced to a basis of $\text{range}\left(T\right)$ by throwing out redundant vectors. In this case, we have $\dim \text{range}\left(T\right) < m = \dim V$. 
 </p>
 <p>
-    It is also common to see this last definition written as $$ f\left(x+h\right) = f\left(x\right) + f'\left(x\right)\cdot h + o\left(h\right) $$ where the "little-$o$" notation indicates a function of smaller order than $h$ as $h\rightarrow 0$, i.e., some function $r\left(h\right)$ so that $$ \lim_{h\rightarrow 0} \frac{r\left(h\right)}{h}=0$$ which is very clearly equivalent to the previous definition.
+    One thing I always get confused on is: what does this say about the matrix representation of $T$ with respect to the given bases? Well, if we are given bases for both $V$ and $W$, the matrix representation of $T$ with respect to these bases is set in stone. The columns are the basis vectors in $V$ written in the basis of $W$. If we want a different representation for $T$, we need to look at changing the bases.
 </p>
 
+### Something similar
 
-### The derivative in general Euclidean spaces
-We consider the more general case of $f:E\subset\mathbb{R}^n \rightarrow \mathbb{R}^m$. The ideas of the difference quotient and linear approximation are the same, but now the domain and the range are vector spaces, and so division and multiplication must be treated more carefully.
+<p>
+    In Axler's proof of the rank-nullity theorem, he constructs a basis for $\text{range}\left(T\right)$ in much the same way that we did in finding the spanning set in the previous lemma. Unlike that situation, though, where we started with a basis for all of $V$, he starts by taking a basis $\left(u_1,\ldots,u_p\right)$ of $\text{null}\left(T\right)$, extending it to a basis $\left(u_1,\ldots,u_p,v_1,\ldots,v_q\right)$ of $V$, and showing that $\left(Tv_1,\ldots,Tv_q\right)$ is a basis of $\text{range}\left(T\right)$. In this way, he starts with a particular type of basis on $V$, one which is segregated into a collection of null basis vectors and non-null basis vectors, and shows that the non-null collection maps to a basis for the range. In doing so, he avoids needing to worry about the redundant vectors I encountered above. The proof of this is very similar. 
+</p>
 
-<div class="definition" >
-    For a function $f:E\subset\mathbb{R}^n\rightarrow \mathbb{R}^m$ defined on an open set $E$ containing a point $x$, $f$ has derivative $Df\left(x\right)$ if $$ \lim_{h\rightarrow 0} = \frac{\left|f\left(t+h\right)-f\left(x\right)-Df\left(h\right)\cdot h\right|}{\left|h\right|} = 0$$ where $Df\left(x\right):\mathbb{R}^n \rightarrow \mathbb{R}^m$ is a linear mapping.
-</div>
 <p>
-    This is a clear generalization of the second definition of derivative we made above in the univariate, scalar-valued case. Note that vector magnitudes are taken in both the numerator and the denominator (though these norms are in different spaces). 
+    A very interesting result follows this theorem and is described in an exercise (?). It asks for the existence of a basis for $V$ and a basis for $W$ in which the matrix representation of $T$ has only ones along the "diagonal" of the first $\dim \text{range}\left(T\right)$ entries. I claim that the bases mentioned in the previous paragraph nearly suit this purpose. The only change to be made is that the basis for $\text{range}\left(T\right)$ must be extended to a basis of all of $W$. However, since none of the rest of $W$ can be attained by $Tv$ for any $v\in V$, the repective columns of the matrix representation of $T$ will be all zeros. Thus, the matrix representation is still a $\dim W \times \dim V$ matrix, as usual, but it has this particularly simple structure.
 </p>
 <p>
-    We can obtain the familiar "linear approximation" representation if we make a similar definition: let $$ r\left(h\right) = f\left(x+h\right) - f\left(x\right) - Df\left(a\right)\cdot h. $$ Then the definition of the multivariate derivative is as the linear function $Df\left(a\right)$ so that $$ f\left(x+h\right) = f\left(x\right) + Df\left(a\right)\cdot h + r\left(h\right), \; \text{where} \; \lim_{h\rightarrow 0} \frac{\left|r\left(h\right)\right|}{\left|h\right|}. $$
+    This is one of the key insights we gain as we study linear algebra: any linear map can be represented by matrix multiplication on the appropriate column vector space, and we can understand the linear map itself by looking at its matrix representation. Further, choosing our bases wisely --- and often based on the map itself, as in this case --- we can get very simplistic representations.
 </p>
-<p>
-    The linear function $Df\left(a\right)$, which is applied to perturbations $h$, is called the differential or derivative or total derivative of $f$ at $x$. Since it is a linear transformation, it admits a matrix representation, in particular in the standard Euclidean bases for $\mathbb{R}^n$ and $\mathbb{R}^m$. This matrix represesntation is called the Jacobian matrix.
-</p>
+
+### Examples
+
+
+
+
+
 
 {% comment %}
 <h3>References</h3>
