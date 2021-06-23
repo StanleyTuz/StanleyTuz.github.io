@@ -53,11 +53,39 @@ This matrix representation of an arbitrary vector becomes useful due to the defi
     This is one of the key insights we gain as we study linear algebra: any linear map can be represented by matrix multiplication on the appropriate column vector space, and we can understand the linear map itself by looking at its matrix representation. Further, choosing our bases wisely --- and often based on the map itself, as in this case --- we can get very simplistic representations.
 </p>
 
+<p>
+    Similar to our discussion above, let $T:V^m \rightarrow W^m$ be a linear map. Let $\left(u_1,\ldots,u_p\right)$ be a basis for $\text{null}\left(T\right)$ and extend it to a basis $A=\left(v_1,\ldots,v_q,u_1,\ldots,u_p\right)$ of $V$. From above, we know that $\left(Tv_1,\ldots, Tv_q\right)$ is a basis --- not just a spanning set! --- for $\text{range}\left(T\right)\subseteq W$. Extend this latter set to a basis $B=\left(Tv_1,\ldots, Tv_q, w_1, \ldots, w_r\right)$ of $W$. Notice that these basis are intertwined with the map $T$, and were chosen based on the null set and range of $T$. What does the matrix representation of $T$ with respect to these bases look like?
+</p>
+<p>
+    Recalling that each column of the matrix of $T$ with respect to bases $A$ and $B$, written here as $\left[ T \right]_{AB}$, is the image of a basis vector in $A$ under $T$, written in the basis $B$. Formally, the $j$-th column is $\left[Tv_j\right]_B$ (we know that this choice of structure of the matrix representation of $T$ leads to the isomorphism between matrices and finite-dimensional vector space linear mappings). Since the first $q$ vectors in the basis $A$ for $V$ are the basis for $\text{range}\left(A\right)$, by definition of $B$ we have $\left[Tv_j\right]_B = \left(0,0,\ldots,1, \ldots, 0\right)$ where the only non-zero entry is in the $j$-th place. Hence, the first $\dim \text{range}\left(T\right) = q$ columns of $\left[T\right]_{AB}$ have ones along the main "diagonal"; it's not a true diagonal unless $\dim V = \dim W$ and the matrix is square.
+</p>
+<p>
+    The remaining $\dim \text{null}\left(T\right) = p$ vectors in $A$ are a basis for $text{null}\left(T\right)$, so we have $\left[Tu_i\right]_{B} = \left[0\right]_{B}= (0,\ldots,0\right)$ for the rest of the columns.
+</p>
+
+
 ### Examples
+<p>
+    Consider the spaces $V=\mathbb{R}^3$ and $W=\mathbb{R}^2$ with the linear map $$ T\left(x,y,z\right) = \left(x+y, x+y\right).$$ By inspection, $\text{range}\left(T\right) = \text{span}\left(\left(1,1\right)\right)$, so the range has dimension 1. By the rank-nullity theorem, $\text{null}\left(T\right)$ must have dimension 2. Let's consider the matrix representation of $T$ with respect to a couple of bases.
+</p>
+<p>
+    First, consider the standard Euclidean bases on both $V$ and $W$. The images of these vectors are trivial to compute and to write in the standard Euclidean bases, so the matrix representation is $$ \left[ \begin{array}{ccc} 1 & 1 & 0 \\ 1 & 1 & 0 \end{array} \right].$$
+</p>
+<p>
+    More interestingly, let's follow the process above to get the simplified representation. The null space of $T$ is the set of all $\left(x,y\right)$ such that $x+y = 0$, i.e., $x=-y$, so the null space has basis $$\left( \left(1,-1,0\right), \left(0,0,1\right)\right)$$. The process for extending this to a basis of all of $V$ is to simply choose a vector which is not in the span of the previous vectors; by inspection, we come up with $$A=\left(\left( \begin{array}{c} 0 \\ 1 \\ 0 \end{array} \right), \left( \begin{array}{c}1\\ -1 \\ 0 \end{array} \right), \left( \begin{array}{c} 0 \\ 0 \\ 1 \end{array} \right)\right)) = \left(v_1, u_1, u_2\right)$$ as the desired basis for $V$, where we know $\left(Tv_1\right)$ is a basis for $\text{range}\left(T\right)$ and $\left(u_1,u_2\right)$ was constructed as a basis for $\text{null}\left(T\right)$. 
+</p>
+<p>
+    The next step is to obtain the basis of $W$, $B$, corresponding to our choice of basis $A$ of $V$ which, together, admit the nice representation of $T$. As in our above discussion, we just push the $v_j$ through $T$, then extend the collection of these images to be a basis of $W$. Let $$ w_1 = \left(1, 0\right) = \left[Tv_1\right]_B = \left[\left(1,1\right)\right]_B $$. The remaining vectors in the basis $A$ are the null basis, so the corresponding columns are zeros. Thus, the matrix representation we have obtained is $$ \left[T\right]_{AB} = \left[ \begin{array}{ccc} 1 & 0 & 0 \\ 0 & 0 & 0 \end{array}\right] $$ which is precisely the representation we sought. 
+</p>
+<p>
+    Let's quickly confirm this using an example. Consider $v=\left(1,2,3\right) \in \mathbb{R}^3$ in the standard basis. $T$ clearly maps this to $\left(3,3\right)\in \mathbb{R}^2$ in the standard basis. We want to verify that the matrix we have constructed exactly replicates this operation via matrix multiplication in the bases we found. We can by inspection write $v$ in the basis $A$ as $$ \left[v\right]_{A} = \left(\begin{array}{c} 3 \\ 1 \\ 3 \end{array}\right). $$ Performing the matrix multiplication gives us $$ \left[ T\right]_{AB}\left[v\right]_{A} = \left[\begin{array}{ccc} 1 & 0 & 0 \\ 0 & 0 & 0 \end{array}\right]\left[\begin{array}{c} 3 \\ 1 \\ 3 \end{array}\right] = \left[ \begin{array}{c} 3 \\ 0 \end{array}\right] $$ which is a vector in the basis $B$ on $W$. By rewriting this in the standard basis, we have $$ 3 \cdot \left( \begin{array}{c} 1 \\ 1 \end{array}\right) + 0 \cdot \left(\vdots\right)$$ which is exactly what we expected. Notice that we left the second basis vector of $W$ blank because we didn't ever actually compute it; we should have chosen it by extending the basis $\left(Tv_1\right)$ of $\text{range}\left(T\right)$ to all of $W$. It doesn't matter because these vectors will have a zero coefficient in the matrix of $T$, since they are not "reachable" by $T$, i.e., they are not in $\text{range}\left(T\right)$.
+</p>
 
 
 
+### Conclusion
 
+We will see similar ways of choosing bases to simplify matrix representations when we talk about eigenvalues of linear operators of finite-dimensional spaces.
 
 
 {% comment %}
