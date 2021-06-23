@@ -18,18 +18,10 @@ Several theorems in the book support this philosophy, specifically those which d
 </p>
 
 
-### Linear Maps
-<div class="definition">
-    A map $T:V\rightarrow W$ between two linear spaces $V$ and $W$ (over $F$) is linear if $$ T\left(\alpha u + \beta v\right) = \alpha Tu + \beta Tv $$ for all $u,v \in V$ and $\alpha, \beta \in F$.
-</div>
-<p>
-    Linear maps are just functions on vector spaces which have this particularly convenient property. Linear algebra as a subject is the study of linear spaces and the linear maps between them.
-</p>
-
-
-### Basis for a Linear Space
-
 ### Matrix Representations of Vectors
+Assume we have a vector space $V$ with basis $\Beta_V = \left\{v_1, v_2,\ldots,v_m\right\}$, so that $\dim V = m$. The significance of a basis is that every vector $v \in V$ may be written uniquely as a linear combination of the basis vectors. When the basis set and its ordering are understood, we can write a vector in an arbitrary linear space as a column matrix whose elements are the scalar coefficients in the combination. In particular, the vector $$ v = \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_m v_m $$ can be written as the vector $$ \left[ v\right]_{\Beta} = \left(\begin{array}{c} \alpha_1 \\ \alpha_2 \\ \ldots \\ \alpha_m \end{array} \right) $$ where I'll use the notation $\left[\cdot \right]_{\Beta}$ to indicate the matrix representation of the enclosed quantity with respect to the basis $\Beta$.
+
+
 
 ### Matrix Representations of Linear Maps
 
