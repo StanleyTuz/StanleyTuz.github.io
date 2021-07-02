@@ -16,7 +16,7 @@ tags: vector space basis matrix
     The next step in the development is to compare pointwise convergence with *uniform convergence*, which is often described as pointwise convergence in which the same $\delta$ "works for all $x\in X$". This is the key to my confusion: this is what we are *defining* as convergence, but we have not yet mentioned any sort of metric on the space of function in which our function sequences live.
 </p>
 <p>
-    The missing piece is exactly the uniform norm, $$ \left\lVert f \right\rVert_{\infty} := \sup_{x\in X} d_Y\left(f\left(x),0\right). $$
+    The missing piece is exactly the uniform norm, $$ \left\lVert f \right\rVert_{\infty} := \sup_{x\in X} d_Y\left(f\left(x\right),0\right). $$
 </p>
 
 
