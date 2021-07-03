@@ -16,13 +16,13 @@ tags: vector space basis matrix
     A quick note: we are concerned with convergence of sequences of functions. Thus, we use the definition of sequence convergence, which involves indexing through the natural numbers. The "closeness" in the domain, $X$, is less important: the epsilon-delta definitions come up when we discuss continuity of functions and function sequences.
 </p>
 <p>
-    The general discussion of function sequence convergence often begins with defining *pointwise convergence*, where for any fixed point in the domain, $x \in X$, the sequence of points $\left(f_n\left(x\right) \right)_{n \in \mathbb{N} } \subset Y$ converges. The limit is often written "$f\left(x\right)$", indicating that the collection of limiting points of the sequences $\left\{ \left(f_n\left(x\right)\right)_{n\in\mathbb{N}} \, \middle| \, x\in X\right\}$ themselves constitute a function. This resultant function $f$ is the "pointwise limit" of the $f_n$, and we often write $$ f\left(x\right) := \lim_{n\rightarrow \infty} f_n\left(x\right), $$ as the definition. Note that the convergence of the function sequence is entirely defined by convergence at each individual point in the domain, and so for a given $\epsilon>0$, each $x\in X$ will generally have a different $N \in \mathbb{N}$ which works.
+    The general discussion of function sequence convergence often begins with defining *pointwise convergence*, where for any fixed point in the domain, $x \in X$, the sequence of points $\left(f_n\left(x\right) \right)_{n \in \mathbb{N} } \subset Y$ converges. The limit is often written "$f\left(x\right)$", indicating that the collection of limiting points of the sequences $\left\{ \left(f_n\left(x\right)\right)_{n\in\mathbb{N}} \, \middle| \, x\in X\right\}$ themselves constitute a function. This resultant function $f$ is the "pointwise limit" of the $f_n$, and we often write $$ f\left(x\right) := \lim_{n\rightarrow \infty} f_n\left(x\right), $$ as the definition. Note that the convergence of the function sequence is entirely defined by convergence at each individual point in the domain, and so for a given $\epsilon>0$, each $x\in X$ will generally have a different $n_0 \in \mathbb{N}$ which works.
 </p>
 <p>
     Pointwise convergence has some limitations. A primary one is that the pointwise limit of continuous functions need not be continuous. This is easily seen by the example...
 </p>
 <p>
-    The next step in the development is to compare pointwise convergence with *uniform convergence*, which is often described as pointwise convergence in which the same $\delta$ "works for all $x\in X$". Formally, the $\left(f_n\right)_{n\in\mathbb{N}}$ converges to $f$ uniformly if for arbitrary $\epsilon>0$, there is some $N \in \mathbb{N}$ so that $$ n > N \implies d_Y\left(f_n\left(x\right), f\left(x\right)\right) < \epsilon $$ for *all* $x \in X$. Thus, the functions in the sequence get arbitrary close to the limiting function "all at once". The limit of uniformly convergent sequences has much nicer properties than the general pointwise counterparts.
+    The next step in the development is to compare pointwise convergence with *uniform convergence*, which is often described as pointwise convergence in which the same $\delta$ "works for all $x\in X$". Formally, the $\left(f_n\right)_{n\in\mathbb{N}}$ converges to $f$ uniformly if for arbitrary $\epsilon>0$, there is some $n_0 \in \mathbb{N}$ so that $$ n > n_0 \implies d_Y\left(f_n\left(x\right), f\left(x\right)\right) < \epsilon $$ for *all* $x \in X$. Thus, the functions in the sequence get arbitrary close to the limiting function "all at once". The limit of uniformly convergent sequences has much nicer properties than the general pointwise counterparts.
 </p>
 <p>
     My confusion is how these notions of "convergence" are formally related to convergence in the space of functions. We are *calling* these function sequences convergent, but we have not yet mentioned any sort of metric on the space of function in which our function sequences live. The missing piece is exactly the uniform norm, $$ \left\lVert f \right\rVert_{\infty} := \sup_{x\in X} d_Y\left(f\left(x\right),0\right). $$ In the next section, I will show that sequence of functions is "uniformly convergent" if and only if it is convergent in the uniform norm on $F$.
@@ -40,14 +40,20 @@ tags: vector space basis matrix
 
 ### Completeness
 <p>
-    How does completeness and the concept of Cauchy sequences work here?
+    How does completeness and the concept of Cauchy sequences work here? As always, Cauchy sequences are ones which are "intrinsically convergent", in that we would expect them to converge, since the sequence points get arbitrarily close. The sticking point is that the point they converge to may not lie within the space under consideration. The classical example of a Cauchy sequence failing to converge is the sequence $\left\{1/n\right\}_{n\in \mathbb{N}}$ in $\left(0,1\right)\subset\mathbb{R}$; the sequence is certainly Cauchy, but its limit, 0, is not in the space. The spaces in which Cauchy sequences converge are labeled "complete". Note that completeness of a metric space depends, of course, on the metric. In short, Cauchy sequences always "converge" in the sense that the points get arbitrarily close, but the space itself may not be well-behaved enough to contain these limits.
 </p>
+<p>
+    In the above exploration, we skirted this issue and discussed only the mechanics of convergence. Our proof assumed in both directions that the sequence in question converged in some manner to a limit within the original space, and we didn't need to address completeness. In interesting examples of function spaces, it is not always evident that the limit function is still within the original space. In complete metric spaces, we can start with well-behaved --- i.e., Cauchy --- sequences and be sure that their limit lies within the set; this is the utility of complete metric spaces. To show that a space is complete, we often need to start with an arbitrary Cauchy sequence, provide its limit, and show that the limit is still within the space.
+</p>
+<p>
+    For example, we can show that the set of bounded, real-valued functions on a metric space $X$ is complete. In this example, we start with a Cauchy sequence of functions. By Cauchy, we mean that the functions get arbitrarily close in the uniform metric. Next, we guess that the limit of this sequence is the pointwise limit of the functions at each point $x\in X$ (this "converges" in the basic pointwise sense). We proceed to use the Cauchy-ness of the sequence to show that the sequence does indeed converge to our proposed limit in the uniform norm. Last, we need to verify that this limit function is bounded, and so it is still in the original space. This shows that the space is complete.
+</p>
+
+
+
 
 ### Conclusion
 
-<p>
-    We will see similar ways of choosing bases to simplify matrix representations when we talk about eigenvalues of linear operators of finite-dimensional spaces.
-</p>
 
 
 {% comment %}
