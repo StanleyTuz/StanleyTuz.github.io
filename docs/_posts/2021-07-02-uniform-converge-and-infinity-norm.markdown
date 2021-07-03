@@ -29,6 +29,9 @@ tags: vector space basis matrix
 </p>
 
 ### Short proof of equivalence
+<div class="theorem">
+    Function sequence $\left(f_n\right)_{n\in \mathbb{N}}$ converges uniformly to $f$ if and only if it converges to $f$ in the uniform norm.
+</div>
 <p>
     Let $\left(f_n\right)_{n\in\mathbb{N}}$ converge uniformly to $f$ in the function space $F$, and let $\epsilon >0$ be given. Then by definition of uniform convergence, there is some $n_0 \in \mathbb{N}$ so that $$ n > n_0 \implies d_Y\left(f_n\left(x\right), f\left(x\right) \right) < \frac{\epsilon}{2} $$ for all $x \in X$. Thus, the set $$ B =
     \left\{ d_Y\left(f_{n'}\left(x'\right), f\left(x'\right) \right)\, \middle| \, n' > n_0, x' \in X \right\} $$ is a subset of $\mathbb{R}$ which is bounded above by $\epsilon /2$. By completeness of $\mathbb{R}$, we have a supremum $\beta = \sup B$ so that $$ \beta \leq \frac{\epsilon}{2} < \epsilon. $$ Now, if we fix $n > n_0$, we have $$ \left\{ d_Y\left(f_n\left(x\right), f\left(x\right)\right) \, \middle| \, x \in X \right\} \subseteq B, $$ so this set is also bounded above by $\beta$. Thus, we have $$ n > n_0 \implies \left\lVert f_n - f\right\rVert_{\infty} = \sup_{x\in X} d_Y\left(f_n\left(x\right), f\left(x\right)\right) \leq \beta < \epsilon. $$ Hence, $\left(f_n\right)_{n\in\mathbb{N}}$ converges to $f$ in the uniform norm on $F$.
