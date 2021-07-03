@@ -43,7 +43,7 @@ tags: vector space basis matrix
     How does completeness and the concept of Cauchy sequences work here? As always, Cauchy sequences are ones which are "intrinsically convergent", in that we would expect them to converge, since the sequence points get arbitrarily close. The sticking point is that the point they converge to may not lie within the space under consideration. The classical example of a Cauchy sequence failing to converge is the sequence $\left\{1/n\right\}_{n\in \mathbb{N}}$ in $\left(0,1\right)\subset\mathbb{R}$; the sequence is certainly Cauchy, but its limit, 0, is not in the space. The spaces in which Cauchy sequences converge are labeled "complete". Note that completeness of a metric space depends, of course, on the metric. In short, Cauchy sequences always "converge" in the sense that the points get arbitrarily close, but the space itself may not be well-behaved enough to contain these limits.
 </p>
 <p>
-    In the above exploration, we skirted this issue and discussed only the mechanics of convergence. Our proof assumed in both directions that the sequence in question converged in some manner to a limit within the original space, and we didn't need to address completeness. In interesting examples of function spaces, it is not always evident that the limit function is still within the original space. In complete metric spaces, we can start with well-behaved --- i.e., Cauchy --- sequences and be sure that their limit lies within the set; this is the utility of complete metric spaces. To show that a space is complete, we often need to start with an arbitrary Cauchy sequence, provide its limit, and show that the limit is still within the space.
+    In the above exploration, we skirted this issue and discussed only the mechanics of convergence. Our proof assumed in both directions that the sequence in question converged to a limit within the original space, and we didn't need to address completeness. In fact, Cauchy sequences converge in the sense described in the theorem. However, in interesting examples of function spaces, it is not always evident that the limit function is still within the original space. In complete metric spaces, we can start with well-behaved --- i.e., Cauchy --- sequences and be sure that their limit lies within the set; this is the utility of complete metric spaces. To show that a space is complete, we often need to start with an arbitrary Cauchy sequence, provide its limit, and show that the limit is still within the space. Key (unproven here): sequences of Cauchy functions always "converge" in the uniform norm, but they may not converge to a limit in the space.
 </p>
 <p>
     For example, we can show that the set of bounded, real-valued functions on a metric space $X$ is complete. In this example, we start with a Cauchy sequence of functions. By Cauchy, we mean that the functions get arbitrarily close in the uniform metric. Next, we guess that the limit of this sequence is the pointwise limit of the functions at each point $x\in X$ (this "converges" in the basic pointwise sense). We proceed to use the Cauchy-ness of the sequence to show that the sequence does indeed converge to our proposed limit in the uniform norm. Last, we need to verify that this limit function is bounded, and so it is still in the original space. This shows that the space is complete.
@@ -53,7 +53,9 @@ tags: vector space basis matrix
 
 
 ### Conclusion
-
+<p>
+    In summary, Cauchy sequences "should" always converge. For Cauchy function sequences in the uniform norm, the same is true. We have shown that convergence in the uniform norm is the same as the standard "uniform convergence". In a complete metric function space, every Cauchy function space converges to a point in the space.
+</p>
 
 
 {% comment %}
