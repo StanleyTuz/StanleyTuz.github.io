@@ -10,7 +10,7 @@ tags: compact topology space tychonoff
     The standard definition of topological compactness is in terms of open covers. There are several equivalent formulations, especially in the case of metric spaces. The Tychonoff theorem, which states that the arbitrary product of compact spaces is compact, can be easily proved using such an alternate formulation which involves intersections of closed subbases. To this end, we will discuss open and closed bases and subbases, the finite intersection property, how compactness can be defined, and the proof of the Tychonoff theorem.
 </p>
 
-### Closed Subbases
+### Bases, Subbases, and Covers
 <p>
     Given a topological space $\left(X,\tau\right)$, a basis for this space is a collection of open sets $\mathcal{B}\subset \tau$ such that every open set can be written as a union of these basic sets. A closed basis is a collection of closed sets whose complements comprise an open basis.  
 </p>
@@ -20,6 +20,12 @@ tags: compact topology space tychonoff
 <p>
     Why bother with subbases? Subbasis elements need not be open or closed themselves: they are just any old subsets. They are useful in different contexts...
 </p>
+<p>
+    We can go even further and define basic open covers of a space as open covers whose elements are drawn from a basis for the topology. As might be expected, open covers and basic open covers are quite intertwined. For example, we have the following:
+</p>
+<div class="lemma">
+    A topological space is compact if and only if every basic open cover has a finite subcover.
+</div>
 
 
 ### The Finite Intersection Property
@@ -33,7 +39,7 @@ tags: compact topology space tychonoff
     Topological space $\left(X,\tau\right)$ is compact if and only if every class of closed sets $\left\{ C_i\right\}_{i\in I}$ with the FIP has non-empty total intersection: $$ \cap_{i\in I}C_i \neq \varnothing.$$
 </div>
 <p>
-    In other words, the FIP takes care of the case where the collection of closed sets is finite (FIP works more generally for not just closed sets); this theorem says that compact spaces are those for which we can take a collection of closed sets with FIP and extend the conclusion to the non-finite intersection.
+    In other words, the FIP takes care of the case where the collection of closed sets is finite (FIP is defined more generally for not just closed sets); this theorem says that compact spaces are those for which we can take a collection of closed sets with FIP and extend the conclusion to the non-finite intersection. The proof of this theorem hinges on the key that a class of closed subsets with empty intersection has complements which form an open cover of the space.
 </p>
 
 
