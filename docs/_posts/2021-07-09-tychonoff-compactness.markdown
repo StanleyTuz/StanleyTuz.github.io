@@ -18,7 +18,7 @@ tags: compact topology space tychonoff
     An open subbasis for the topology is a collection of subsets of $X$ such that the class of all finite intersections of the subbasis elements is a basis for the topology. This subbasis generates the topology in the sense that the topology is the smallest one which contains the subbasis. A closed subbasis is a collection of subsets of $X$ whose complements comprise an open subbasis. As expected, finite unions of closed subbasis elements form a closed base, and this is pretty easily seen.
 </p>
 <p>
-    Why bother with subbases?
+    Why bother with subbases? Subbasis elements need not be open or closed themselves: they are just any old subsets. They are useful in different contexts...
 </p>
 
 
@@ -27,7 +27,13 @@ tags: compact topology space tychonoff
     A class of subsets of a set has the finite intersection property is every finite subclass has non-empty intersection.
 </div>
 <p>
-    The Finite Intersection Property (FIP) may be possessed by a collection of subsets.
+    The finite intersection property (FIP) may be possessed by a collection of subsets.
+</p>
+<div class="theorem">
+    Topological space $\left(X,\tau\right)$ is compact if and only if every class of closed sets $\left\{ C_i\right\}_{i\in I}$ with the FIP has non-empty total intersection: $$ \cap_{i\in I}C_i \neq \varnothing.$$
+</div>
+<p>
+    In other words, the FIP takes care of the case where the collection of closed sets is finite (FIP works more generally for not just closed sets); this theorem says that compact spaces are those for which we can take a collection of closed sets with FIP and extend the conclusion to the non-finite intersection.
 </p>
 
 
