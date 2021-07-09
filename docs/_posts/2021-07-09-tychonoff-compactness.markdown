@@ -35,6 +35,9 @@ tags: compact topology space tychonoff
 <p>
     The finite intersection property (FIP) may be possessed by a collection of subsets.
 </p>
+<p>
+    It turns out that compactness of a topological space is strongly related to the closed subsets with the FIP:
+</p>
 <div class="theorem">
     Topological space $\left(X,\tau\right)$ is compact if and only if every class of closed sets $\left\{ C_i\right\}_{i\in I}$ with the FIP has non-empty total intersection: $$ \cap_{i\in I}C_i \neq \varnothing.$$
 </div>
@@ -42,16 +45,22 @@ tags: compact topology space tychonoff
     In other words, the FIP takes care of the case where the collection of closed sets is finite (FIP is defined more generally for not just closed sets); this theorem says that compact spaces are those for which we can take a collection of closed sets with FIP and extend the conclusion to the non-finite intersection. The proof of this theorem hinges on the key that a class of closed subsets with empty intersection has complements which form an open cover of the space.
 </p>
 
-
-### Compactness in terms of FIP
 <p>
-
+    The following theorem generalizes the previous two theorems in terms of subbases rather than just bases. The proof of this is quite long.
 </p>
-
+<div class="theorem">
+    A topological space is compact if any subbasic open cover has a finite subcover. Equivalently, the space is compact if every class of *subbasic closed sets* with the FIP has non-empty intersection.
+</div>
 
 ### The Tychonoff Theorem
 <p>
-
+    The Tychonoff theorem involves arbitrary non-trivial products of compact spaces:
+</p>
+<div class="theorem">
+    The product $X = \Pi_i X_i$ of compact spaces $\left\{X_i\right\}$ is compact.
+</div>
+<p>
+    We know that $X$ has the product topology on it, and we can start with the closed subbase which defines this topology. From the previous theorem, we can take a collection of subbasic closed sets, assume it has the FIP, and show that it has non-empty intersection. This requires moving to the factor spaces $X_i$, compact, and using the equivalent formulation of compactness in terms of the FIP.
 </p>
 
 
