@@ -46,7 +46,7 @@ tags: topology space quotient saturated fiber
     Let $\phi: X/\sim \rightarrow \mathbb{R}_+$ be the map $$ \phi\left(\left[x\right]\right) = \left|x\right|. $$ We will show that this is well-defined and a homemorphism. To show that it is well-defined, we need to show that the function value is invariant under change of representative member of the equivalence class. Let $ y \in \left[x\right]$, so that $\left|x\right|=\left|y\right|$ by definition of the equivalence relation. Then $$ \phi\left(\left[x\right]\right) = \left|x\right| = \left|y\right| = \phi\left(\left[y\right]\right)$$ so the choice of representative member of the equivalence class does not change the function value: it is well-defined. 
 </p>
 <p>
-    Next, let $U$ be open in $\mathbb{R}_+$. If $U$ is an open interval not containing $0$, then $$ \phi^{-1}\left(U\right) = \left\{ \left[x\right] \, \middle| \, \left|x\right|\in U \right\}$$
+    Next, let $U$ be open in $\mathbb{R}_+$. If $U$ is an open interval not containing $0$, then let $-U$ denote the open interval obtained by reflecting $U$ across the origin in $\mathbb{R}$. Then we have $$ \begin{align} \phi^{-1}\left(U\right) & = \left\{ \left[x\right] \, \middle| \, \left|x\right|\in U \right\} \\ = \left\{ \left[x\right] \, \middle| \, x \in -U\cup U \right\} \end{align}$$
 </p>
 
 
