@@ -36,7 +36,7 @@ tags: topology space quotient saturated fiber
 ### Example
 
 <p>
-    A basic example is the map $f:\mathbb{R}\rightarrow \mathbb{R}_{+}$ given by $$ f\left(x\right) = \left|x\right|. $ This map is certainly surjective. The fiber of $f$ over any $y \in \mathbb{R}_+$ is $$ f^{-1}\left(\left\{y\right\}\right) = \left\{ -y,y\right\}, $$ so the saturated sets in $X=\mathbb{R}$ are those which are ``symmetric'' about the origin.
+    A basic example is the map $f:\mathbb{R}\rightarrow \mathbb{R}_{+}$ given by $$ f\left(x\right) = \left|x\right|. $$ This map is certainly surjective. The fiber of $f$ over any $y \in \mathbb{R}_+ $ is $$ f^{-1}\left(\left\{y\right\}\right) = \left\{ -y,y\right\}, $$ so the saturated sets in $X=\mathbb{R}$ are those which are ``symmetric'' about the origin.
 </p>
 
 
