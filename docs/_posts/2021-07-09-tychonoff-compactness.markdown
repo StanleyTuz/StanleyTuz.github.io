@@ -26,23 +26,22 @@ tags: compact topology space tychonoff
 <div class="lemma">
     A topological space is compact if and only if every basic open cover has a finite subcover.
 </div>
-
+<p>
+    This obviously mirrors the standard definition of compactness in terms of open covers and subcovers, not necessarily basic.
+</p>
 
 ### The Finite Intersection Property
 <div class="definition">
     A class of subsets of a set has the finite intersection property is every finite subclass has non-empty intersection.
 </div>
 <p>
-    The finite intersection property (FIP) may be possessed by a collection of subsets.
-</p>
-<p>
-    It turns out that compactness of a topological space is strongly related to the closed subsets with the FIP:
+    The finite intersection property (FIP) may be possessed by a particular collection of subsets. In particular, it turns out that compactness of a topological space is strongly related to the closed subsets with the FIP:
 </p>
 <div class="theorem">
     Topological space $\left(X,\tau\right)$ is compact if and only if every class of closed sets $\left\{ C_i\right\}_{i\in I}$ with the FIP has non-empty total intersection: $$ \cap_{i\in I}C_i \neq \varnothing.$$
 </div>
 <p>
-    In other words, the FIP takes care of the case where the collection of closed sets is finite (FIP is defined more generally for not just closed sets); this theorem says that compact spaces are those for which we can take a collection of closed sets with FIP and extend the conclusion to the non-finite intersection. The proof of this theorem hinges on the key that a class of closed subsets with empty intersection has complements which form an open cover of the space.
+    In other words, a collection of sets with the FIP by definition have non-empty finite intersections; this theorem says that compact spaces are those for which we can take a collection of closed sets with FIP and extend the conclusion to the intersection of *all* the sets. The proof of this theorem hinges on the key that a class of closed subsets with empty intersection has complements which form an open cover of the space.
 </p>
 
 <p>
