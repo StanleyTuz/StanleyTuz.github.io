@@ -13,12 +13,8 @@ tags: topology space quotient saturated fiber
 
 
 ### Saturated Sets
-<div class="theorem">
-    Let $p:X\rightarrow Y$ be a surjective map. If $C\subset X$ is saturated with respect to $p$, then $C$ contains all fibers of $p$ which it intersects.
-</div>
-
 <p>
-    Quick proof?
+    Given a surjective mapping $p:X\rightarrow Y$, a subset $C\subseteq X$ is said to be saturated with respect to $p$ if $C$ contains all fibers of $p$ which it intersects.
 </p>
 
 <p>
@@ -31,14 +27,21 @@ tags: topology space quotient saturated fiber
 <p>
     In summary, sets which are saturated with respect to a surjective map are well-behaved with respect to the associated equivalence relation.
 </p>
-
+<p>
+    Another way to think about saturated sets is that they are exactly the preimage of a set in the codomain:
+</p>
+<div class="theorem">
+    $C\subseteq X$ be saturated with respect to the surjective map $p:X\rightarrow Y$ if and only if $ C = f^{-1}\left(D\right)$ for some $D\subseteq Y$. 
+<div>
 
 ### Example
 
 <p>
-    A basic example is the map $f:\mathbb{R}\rightarrow \mathbb{R}_{+}$ given by $$ f\left(x\right) = \left|x\right|. $$ This map is certainly surjective. The fiber of $f$ over any $y \in \mathbb{R}_+ $ is $$ f^{-1}\left(\left\{y\right\}\right) = \left\{ -y,y\right\}, $$ so the saturated sets in $X=\mathbb{R}$ are those which are ``symmetric'' about the origin.
+    A basic example is the map $f:\mathbb{R}\rightarrow \mathbb{R}_{+}$ given by $$ f\left(x\right) = \left|x\right|. $$ This map is certainly surjective. The fiber of $f$ over any $y \in \mathbb{R}_+ $ is $$ f^{-1}\left(\left\{y\right\}\right) = \left\{ -y,y\right\}, $$ so the saturated sets in $X=\mathbb{R}$ are those which are symmetric about the origin. We can give $\mathbb{R}_+$ the quotient topology induced by the map $f$. The saturated open sets are unions of open intervals which are symmetric about the origin, and these map to open intervals in $\mathbb{R}_+$. Thus, these open intervals are open in the quotient topology on $\mathbb{R}_+$. Also, any interval in $\mathbb{R}$ containing the origin will map under $f$ to a closed-open interval in $\mathbb{R}_+$, so these are also open.
 </p>
-
+<p>
+    To approach this same example from the other direction, take $X=\mathbb{R}$ and let $\sim$ be the equivalence relation consisting of points $\left\{-x, x\right\}$ for each $x \in X$. Take $p:X\rightarrow X^*$ as the map sending each $x\in X$ to its equivalence class. We can observe the same structure as before: the saturated sets are those which are symmetric about the origin. The difference now is that the codomain is no longer $\mathbb{R}_+$, but the space of equivalence classes, $X/\sim$.
+</p>
 
 
 
