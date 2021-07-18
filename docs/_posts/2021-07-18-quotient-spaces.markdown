@@ -40,7 +40,13 @@ tags: topology space quotient saturated fiber
     A basic example is the map $f:\mathbb{R}\rightarrow \mathbb{R}_{+}$ given by $$ f\left(x\right) = \left|x\right|. $$ This map is certainly surjective. The fiber of $f$ over any $y \in \mathbb{R}_+ $ is $$ f^{-1}\left(\left\{y\right\}\right) = \left\{ -y,y\right\}, $$ so the saturated sets in $X=\mathbb{R}$ are those which are symmetric about the origin. We can give $\mathbb{R}_+$ the quotient topology induced by the map $f$. The saturated open sets are unions of open intervals which are symmetric about the origin, and these map to open intervals in $\mathbb{R}_+$. Thus, these open intervals are open in the quotient topology on $\mathbb{R}_+$. Also, any interval in $\mathbb{R}$ containing the origin will map under $f$ to a closed-open interval in $\mathbb{R}_+$, so these are also open.
 </p>
 <p>
-    To approach this same example from the other direction, take $X=\mathbb{R}$ and let $\sim$ be the equivalence relation consisting of points $\left\{-x, x\right\}$ for each $x \in X$. Take $p:X\rightarrow X^*$ as the map sending each $x\in X$ to its equivalence class. We can observe the same structure as before: the saturated sets are those which are symmetric about the origin. The difference now is that the codomain is no longer $\mathbb{R}_+$, but the space of equivalence classes, $X/\sim$.
+    To approach this same example from the other direction, take $X=\mathbb{R}$ and let $\sim$ be the equivalence relation consisting of points $\left\{-x, x\right\}$ for each $x \in X$. Take $p:X\rightarrow X^*$ as the map sending each $x\in X$ to its equivalence class. We can observe the same structure as before: the saturated sets are those which are symmetric about the origin. The difference now is that the codomain is no longer $\mathbb{R}_+$, but the space of equivalence classes, $X/\sim$. However, it seems like this space $X/\sim$ is closely related to $\mathbb{R}_+$. We can show that they are homeomorphic!
+</p>
+<p>
+    Let $\phi: X/\sim \rightarrow \mathbb{R}_+$ be the map $$ \phi\left(\left[x\right]\right) = \left|x\right|. $$ We will show that this is well-defined and a homemorphism. To show that it is well-defined, we need to show that the function value is invariant under change of representative member of the equivalence class. Let $ y \in \left[x\right]$, so that $\left|x\right|=\left|y\right|$ by definition of the equivalence relation. Then $$ \phi\left(\left[x\right]\right) = \left|x\right| = \left|y\right| = \phi\left(\left[y\right]\right)$$ so the choice of representative member of the equivalence class does not change the function value: it is well-defined. 
+</p>
+<p>
+    Next, let $U$ be open in $\mathbb{R}_+$. If $U$ is an open interval not containing $0$, then $$ \phi^{-1}\left(U\right) = \left\{ \left[x\right] \, \middle| \, \left|x\right|\in U \right\}$$
 </p>
 
 
