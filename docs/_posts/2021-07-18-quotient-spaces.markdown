@@ -1,7 +1,7 @@
 ---
 layout: posts
 title:  "Quotient Spaces: Basic Concepts"
-date:   2021-18-02
+date:   2021-07-18
 categories: jekyll update
 usemathjax: true
 tags: topology space quotient saturated fiber
