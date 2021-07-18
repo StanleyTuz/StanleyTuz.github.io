@@ -15,7 +15,7 @@ tags: topology space quotient saturated fiber
 ### Saturated Sets
 <div class="theorem">
     Let $p:X\rightarrow Y$ be a surjective map. If $C\subset X$ is saturated with respect to $p$, then $C$ contains all fibers of $p$ which it intersects.
-<div>
+</div>
 
 <p>
     Quick proof?
