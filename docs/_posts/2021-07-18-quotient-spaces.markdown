@@ -18,7 +18,7 @@ tags: topology space quotient saturated fiber
 </p>
 
 <p>
-    Why do we care about saturated sets? The fact that they contain all fibers which intersect them ends up lending itself nicely to quotient spaces. If $p:X\rightarrow Y$ is any surjective map, then we can consider the equivalence relation on $X$ defined as $x \sim y$ if $p\left(x\right) = p\left(y\right)$, i.e., the domain is partitioned into subsets which take the same value under $p$. In this case, both $x$ and $y$ belong to the fiber $p^{-1}\left(\left\{x\right\}\right)$; this set is exactly the members of the equivalence class $\left[x\right]_{\sim}$. If $C\subset X$ is a saturated set containing $x$, then it contains the entire fiber $p^{-1}\left(\left\{x\right\}\right)$. Hence, if we think about the surjective map as inducing this equivalence relation on the domain, where the equivalence classes are exactly the fibers, the saturated sets do not ``split'' any fibers.
+    Why do we care about saturated sets? The fact that they contain all fibers which intersect them ends up lending itself nicely to quotient spaces. If $p:X\rightarrow Y$ is any surjective map, then we can consider the equivalence relation on $X$ defined as $x \sim y$ if $p\left(x\right) = p\left(y\right)$, i.e., the domain is partitioned into subsets which take the same value under $p$. In this case, both $x$ and $y$ belong to the fiber $p^{-1}\left(\left\{x\right\}\right)$; this set is exactly the members of the equivalence class $\left[x\right]_{\sim}$. If $C\subset X$ is a saturated set containing $x$, then it contains the entire fiber $p^{-1}\left(\left\{x\right\}\right)$. Hence, if we think about the surjective map as inducing this equivalence relation on the domain, where the equivalence classes are exactly the fibers, the saturated sets do not "split" any fibers.
 </p>
     
 <p>
@@ -32,7 +32,7 @@ tags: topology space quotient saturated fiber
 </p>
 <div class="theorem">
     $C\subseteq X$ be saturated with respect to the surjective map $p:X\rightarrow Y$ if and only if $ C = f^{-1}\left(D\right)$ for some $D\subseteq Y$. 
-<div>
+</div>
 
 ### Example
 
