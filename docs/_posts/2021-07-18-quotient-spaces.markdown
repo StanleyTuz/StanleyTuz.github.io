@@ -46,8 +46,14 @@ tags: topology space quotient saturated fiber
     Let $\phi: X/\sim \rightarrow \mathbb{R}_+$ be the map $$ \phi\left(\left[x\right]\right) = \left|x\right|. $$ We will show that this is well-defined and a homemorphism. To show that it is well-defined, we need to show that the function value is invariant under change of representative member of the equivalence class. Let $ y \in \left[x\right]$, so that $\left|x\right|=\left|y\right|$ by definition of the equivalence relation. Then $$ \phi\left(\left[x\right]\right) = \left|x\right| = \left|y\right| = \phi\left(\left[y\right]\right)$$ so the choice of representative member of the equivalence class does not change the function value: it is well-defined. 
 </p>
 <p>
-    Next, let $U$ be open in $\mathbb{R}_+$. If $U$ is an open interval not containing $0$, then let $-U$ denote the open interval obtained by reflecting $U$ across the origin in $\mathbb{R}$. Then we have $$ \begin{align} \phi^{-1}\left(U\right) & = \left\{ \left[x\right] \, \middle| \, \left|x\right|\in U \right\} \\ = \left\{ \left[x\right] \, \middle| \, x \in -U\cup U \right\} \end{align}$$
+    Next, let $U$ be open in $\mathbb{R}_+$. If $U$ is an open interval not containing $0$, then let $-U$ denote the open interval obtained by reflecting $U$ across the origin in $\mathbb{R}$. Then we have $$ \phi^{-1}\left(U\right)  = \left\{ \left[x\right] \, \middle| \, \left|x\right|\in U \right\}  = \left\{ \left[x\right] \, \middle| \, x \in -U\cup U \right\} $$ thus $p^{-1}\left(\phi^{-1}\left(U\right)\right) = -U \cup U$ which is open in $\mathbb{R}$, hence $\phi^{-1}\left(U\right)$ is open in $X/\sim$ in the quotient topology. Thus, $\phi$ is continuous. 
 </p>
+<p>
+    Conversely, let $V\subseteq X/\sim$ be open. Then $p^{-1}\left(V\right)$ is open in $\mathbb{R}$. We know that this preimage is an open set in $\mathbb{R}$ which is symmetric about the origin; this is due to the nature of the equivalence classes we defined. Thus, $\phi\left(V\right)$ is exactly the non-negative "half" of this symmetric open set, itself an open set in $\mathbb{R}_+$ (we say "half" because it may contain the origin, resulting in a closed-open interval containing 0 in $\mathbb{R}_+$). Thus, $\phi^{-1}$ is continuous, and $\phi$ is a homeomorphism.
+</p>
+<p>
+    In conclusion, we started this example with an equivalence relation, defined the quotient topology on the space of equivalence classes, and showed that this topological space is homeomorphic to the usual topology on $\mathbb{R}_+$. The homeomorphism we constructed is natural based on the relationship between the domain $\mathbb{R}$ and the equivalence relation, which identifies points equidistant from the origin. In the other approach, we could have started with the domain and the function $f\left(x\right) = \left|x\right|$ and directly constructed a quotient map from $\mathbb{R}$ to $\mathbb{R}_+$. A higher-dimensional version of this would be the map $f\left(x\right) = \left\lVert x \right\rVert_2$ in the plane.
+<p>
 
 
 
