@@ -54,6 +54,9 @@ tags: topology space quotient saturated fiber
 <p>
     In conclusion, we started this example with an equivalence relation, defined the quotient topology on the space of equivalence classes, and showed that this topological space is homeomorphic to the usual topology on $\mathbb{R}_+$. The homeomorphism we constructed is natural based on the relationship between the domain $\mathbb{R}$ and the equivalence relation, which identifies points equidistant from the origin. In the other approach, we could have started with the domain and the function $f\left(x\right) = \left|x\right|$ and directly constructed a quotient map from $\mathbb{R}$ to $\mathbb{R}_+$. A higher-dimensional version of this would be the map $f\left(x\right) = \left\lVert x \right\rVert_2$ in the plane.
 <p>
+<p>
+    Note also that if the mapping $p:X\rightarrow X/\sim$ was a homeomorphism, then we would have shown that $\mathbb{R}$ is homeomorphic to $\mathbb{R}_+$ by composition of homeomorphisms. As expected, we did not. $p$ is not a homeomorphism, since it is not even injective.s
+</p>
 
 
 
