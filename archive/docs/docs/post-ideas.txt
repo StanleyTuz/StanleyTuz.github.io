@@ -1,0 +1,11 @@
+Thoughts on continuity, differentiability.
+
+Inverse Function Theorem proof (SPIVAK)
+
+Compactness, Heine-Borel (SPIVAK)
+
+Differentiability and partial derivatives (SPIVAK)
+
+Equivalent definitions of derivative: limit, linear approx, etc. (?)
+
+Notion of uniformity; why is uniform convergence the better definition (as compared to pointwise)

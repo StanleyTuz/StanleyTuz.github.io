@@ -1,0 +1,9 @@
+[submodule "quickstart/hugo-tranquilpeak-theme"]
+	path = quickstart/hugo-tranquilpeak-theme
+	url = https://github.com/kakawait/hugo-tranquilpeak-theme.git
+[submodule "quickstart/anatole"]
+	path = quickstart/anatole
+	url = https://github.com/lxndrblz/anatole.git
+[submodule "quickstart/strange-case"]
+	path = quickstart/strange-case
+	url = https://github.com/ExchangeRate-API/strange-case.git

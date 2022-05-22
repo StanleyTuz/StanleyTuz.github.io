@@ -1,0 +1,23 @@
+baseURL = 'https://stanleytuz.github.io'
+languageCode = 'en-us'
+title = "Stan Tuznik"
+
+theme = "strange-case"
+
+[params]
+	colorScheme = "scheme-darkbrown"
+	DateFormat = "2 Jan 2006"
+	description = "A blog about content"
+	sidebarFreeText = "A optional paragraph of free text. Set to blank in config.toml to clear..."
+	piwikSiteID = ""
+	piwikURL = ""
+
+[[menu.main]]
+	name = "Hugo"
+	post = "<span class='glyphicon glyphicon-fire'></span>"
+	url = "http://gohugo.io"
+
+[[menu.main]]
+	name = "Bootstrap"
+	post = "<span class='glyphicon glyphicon-ok'></span>"
+	url = "http://getbootstrap.com"
